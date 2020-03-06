@@ -20,5 +20,468 @@
         // git diff para ver los cambios antes de guardar 
         // git log para ver todas las modificaciones 
     
+
+        // copia de todo hecho en git
+ <p>
+    estudiante@pc22 MINGW32 ~
+    $ pwd
+    /c/Users/estudiante
+    
+    estudiante@pc22 MINGW32 ~
+    $ cd Desktop
+    
+    estudiante@pc22 MINGW32 ~/Desktop
+    $ pwd
+    /c/Users/estudiante/Desktop
+    
+    estudiante@pc22 MINGW32 ~/Desktop
+    $ dir
+    Anaconda\ Navigator.lnk  clase\ 1\ fullstack  OFFICE\ 2013.lnk  PROGRAMACION
+    BASE\ DE\ DATOS          desktop.ini          OTROS
+    
+    estudiante@pc22 MINGW32 ~/Desktop
+    $ cd clase\ 1\ fullstack/
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack
+    $ git init
+    Initialized empty Git repository in C:/Users/estudiante/Desktop/clase 1 fullstack/.git/
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git status
+    On branch master
+    
+    No commits yet
+    
+    Untracked files:
+      (use "git add <file>..." to include in what will be committed)
+            index.html
+    
+    nothing added to commit but untracked files present (use "git add" to track)
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git add index.html
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git status
+    On branch master
+    
+    No commits yet
+    
+    Changes to be committed:
+      (use "git rm --cached <file>..." to unstage)
+            new file:   index.html
+    
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git config --global user.name "christian jac"
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git config --global user.email "christian.jac.maker@gmail.com"
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git status
+    On branch master
+    
+    No commits yet
+    
+    Changes to be committed:
+      (use "git rm --cached <file>..." to unstage)
+            new file:   index.html
+    
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git commit -m "mi primer cometario"
+    [master (root-commit) d598d6c] mi primer cometario
+     1 file changed, 13 insertions(+)
+     create mode 100644 index.html
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git status
+    On branch master
+    nothing to commit, working tree clean
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git status
+    On branch master
+    Changes not staged for commit:
+      (use "git add <file>..." to update what will be committed)
+      (use "git restore <file>..." to discard changes in working directory)
+            modified:   index.html
+    
+    no changes added to commit (use "git add" and/or "git commit -a")
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git status
+    On branch master
+    Changes not staged for commit:
+      (use "git add <file>..." to update what will be committed)
+      (use "git restore <file>..." to discard changes in working directory)
+            modified:   index.html
+    
+    no changes added to commit (use "git add" and/or "git commit -a")
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git add
+    Nothing specified, nothing added.
+    Maybe you wanted to say 'git add .'?
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git add index.html
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git status
+    On branch master
+    Changes to be committed:
+      (use "git restore --staged <file>..." to unstage)
+            modified:   index.html
+    
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git commit -m "segundo momentario"
+    [master ee2bef2] segundo momentario
+     1 file changed, 1 insertion(+)
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git status
+    On branch master
+    nothing to commit, working tree clean
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git log
+    commit ee2bef25a4bbbebc9fe8f4ca4a9b2b2bec4ccc19 (HEAD -> master)
+    Author: christian jac <christian.jac.maker@gmail.com>
+    Date:   Fri Mar 6 13:08:03 2020 -0400
+    
+        segundo momentario
+    
+    commit d598d6cd758043a70332f039fecdaceeb113a09e
+    Author: christian jac <christian.jac.maker@gmail.com>
+    Date:   Fri Mar 6 13:03:49 2020 -0400
+    
+        mi primer cometario
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git status
+    On branch master
+    Changes not staged for commit:
+      (use "git add <file>..." to update what will be committed)
+      (use "git restore <file>..." to discard changes in working directory)
+            modified:   index.html
+    
+    no changes added to commit (use "git add" and/or "git commit -a")
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git diff
+    diff --git a/index.html b/index.html
+    index b25dce4..6ad85f0 100644
+    --- a/index.html
+    +++ b/index.html
+    @@ -9,6 +9,9 @@
+    
+         <h1>CHRISTIAN JAC</h1>
+         <h2>modificacion 1 </h2>
+    +    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Invent
+    +        ore quis saepe et dolor omnis natus rerum eligendi fugiat excepturi vo
+    +        luptate fugit quibusdam, in soluta qui atque animi modi reprehenderit incidunt!</p>
+    
+     </body>
+     </html>
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git add index.html
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git status
+    On branch master
+    Changes to be committed:
+      (use "git restore --staged <file>..." to unstage)
+            modified:   index.html
+    
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git commit -m " parrafo lorem"
+    [master 2d60633]  parrafo lorem
+     1 file changed, 3 insertions(+)
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git status
+    On branch master
+    nothing to commit, working tree clean
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git log
+    commit 2d6063376f5a0129f2d24faa84b7ede087081fae (HEAD -> master)
+    Author: christian jac <christian.jac.maker@gmail.com>
+    Date:   Fri Mar 6 13:12:11 2020 -0400
+    
+         parrafo lorem
+    
+    commit ee2bef25a4bbbebc9fe8f4ca4a9b2b2bec4ccc19
+    Author: christian jac <christian.jac.maker@gmail.com>
+    Date:   Fri Mar 6 13:08:03 2020 -0400
+    
+        segundo momentario
+    
+    commit d598d6cd758043a70332f039fecdaceeb113a09e
+    Author: christian jac <christian.jac.maker@gmail.com>
+    Date:   Fri Mar 6 13:03:49 2020 -0400
+    
+        mi primer cometario
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git add index.html
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git status
+    On branch master
+    Changes to be committed:
+      (use "git restore --staged <file>..." to unstage)
+            modified:   index.html
+    
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git commit -m " guia git "
+    [master a32526c]  guia git
+     1 file changed, 6 insertions(+)
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git status
+    On branch master
+    nothing to commit, working tree clean
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git log
+    commit a32526cd657c0adc5d64c2037397415e90a2d1e7 (HEAD -> master)
+    Author: christian jac <christian.jac.maker@gmail.com>
+    Date:   Fri Mar 6 13:17:19 2020 -0400
+    
+         guia git
+    
+    commit 2d6063376f5a0129f2d24faa84b7ede087081fae
+    Author: christian jac <christian.jac.maker@gmail.com>
+    Date:   Fri Mar 6 13:12:11 2020 -0400
+    
+         parrafo lorem
+    
+    commit ee2bef25a4bbbebc9fe8f4ca4a9b2b2bec4ccc19
+    Author: christian jac <christian.jac.maker@gmail.com>
+    Date:   Fri Mar 6 13:08:03 2020 -0400
+    
+        segundo momentario
+    
+    commit d598d6cd758043a70332f039fecdaceeb113a09e
+    Author: christian jac <christian.jac.maker@gmail.com>
+    Date:   Fri Mar 6 13:03:49 2020 -0400
+    
+        mi primer cometario
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git reset hard ^C
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ ^C
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ ^C
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git reset hard d598d6cd758043a70332f039fecdaceeb113a09e
+    fatal: ambiguous argument 'hard': unknown revision or path not in the working tree.
+    Use '--' to separate paths from revisions, like this:
+    'git <command> [<revision>...] -- [<file>...]'
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git reset d598d6cd758043a70332f039fecdaceeb113a09e
+    Unstaged changes after reset:
+    M       index.html
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git hard reset d598d6cd758043a70332f039fecdaceeb113a09e
+    git: 'hard' is not a git command. See 'git --help'.
+    
+    The most similar commands are
+            add
+            var
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ clean
+    bash: clean: command not found
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git clean
+    fatal: clean.requireForce defaults to true and neither -i, -n, nor -f given; refusing to clean
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ asda
+    bash: asda: command not found
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git status
+    On branch master
+    Changes not staged for commit:
+      (use "git add <file>..." to update what will be committed)
+      (use "git restore <file>..." to discard changes in working directory)
+            modified:   index.html
+    
+    no changes added to commit (use "git add" and/or "git commit -a")
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git log
+    commit d598d6cd758043a70332f039fecdaceeb113a09e (HEAD -> master)
+    Author: christian jac <christian.jac.maker@gmail.com>
+    Date:   Fri Mar 6 13:03:49 2020 -0400
+    
+        mi primer cometario
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git status
+    On branch master
+    Changes not staged for commit:
+      (use "git add <file>..." to update what will be committed)
+      (use "git restore <file>..." to discard changes in working directory)
+            modified:   index.html
+    
+    no changes added to commit (use "git add" and/or "git commit -a")
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git log
+    commit d598d6cd758043a70332f039fecdaceeb113a09e (HEAD -> master)
+    Author: christian jac <christian.jac.maker@gmail.com>
+    Date:   Fri Mar 6 13:03:49 2020 -0400
+    
+        mi primer cometario
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git diff
+    diff --git a/index.html b/index.html
+    index 3f2d634..c3410c3 100644
+    --- a/index.html
+    +++ b/index.html
+    @@ -8,6 +8,16 @@
+     <body>
+    
+         <h1>CHRISTIAN JAC</h1>
+    +    <h2>modificacion 1 </h2>
+    +    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Invent
+    +        ore quis saepe et dolor omnis natus rerum eligendi fugiat excepturi vo
+    +        luptate fugit quibusdam, in soluta qui atque animi modi reprehenderit incidunt!</p>
+    +
+    +        // para git
+    +        // git status
+    +        // primero guardar git add y se añade el archivo
+    +        // segundo se tiene que poner un comentario
+    +        // git diff para ver los cambios antes de guardar
+    
+     </body>
+     </html>
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git log
+    commit d598d6cd758043a70332f039fecdaceeb113a09e (HEAD -> master)
+    Author: christian jac <christian.jac.maker@gmail.com>
+    Date:   Fri Mar 6 13:03:49 2020 -0400
+    
+        mi primer cometario
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git status
+    On branch master
+    Changes not staged for commit:
+      (use "git add <file>..." to update what will be committed)
+      (use "git restore <file>..." to discard changes in working directory)
+            modified:   index.html
+    
+    no changes added to commit (use "git add" and/or "git commit -a")
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git add index.html
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git commit -m " guia git "
+    [master 588b5d1]  guia git
+     1 file changed, 11 insertions(+)
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git status
+    On branch master
+    nothing to commit, working tree clean
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git log
+    commit 588b5d16f82eee543e4b82ed0f48dd6ef5d483ed (HEAD -> master)
+    Author: christian jac <christian.jac.maker@gmail.com>
+    Date:   Fri Mar 6 13:36:34 2020 -0400
+    
+         guia git
+    
+    commit d598d6cd758043a70332f039fecdaceeb113a09e
+    Author: christian jac <christian.jac.maker@gmail.com>
+    Date:   Fri Mar 6 13:03:49 2020 -0400
+    
+        mi primer cometario
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git status
+    On branch master
+    Changes not staged for commit:
+      (use "git add <file>..." to update what will be committed)
+      (use "git restore <file>..." to discard changes in working directory)
+            modified:   index.html
+    
+    no changes added to commit (use "git add" and/or "git commit -a")
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ https://github.com/Christian-JAC/clases-fullstack.git
+    bash: https://github.com/Christian-JAC/clases-fullstack.git: No such file or directory
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git status
+    On branch master
+    Changes not staged for commit:
+      (use "git add <file>..." to update what will be committed)
+      (use "git restore <file>..." to discard changes in working directory)
+            modified:   index.html
+    
+    no changes added to commit (use "git add" and/or "git commit -a")
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git add index.html
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git commit -m " guia git v2 "
+    [master 3f55591]  guia git v2
+     1 file changed, 2 insertions(+), 2 deletions(-)
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git status
+    On branch master
+    nothing to commit, working tree clean
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git status
+    On branch master
+    nothing to commit, working tree clean
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git remote add origin https://github.com/Christian-JAC/clases-fullstack.git
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $ git push -u origin master
+    Enumerating objects: 9, done.
+    Counting objects: 100% (9/9), done.
+    Delta compression using up to 8 threads
+    Compressing objects: 100% (6/6), done.
+    Writing objects: 100% (9/9), 1.15 KiB | 394.00 KiB/s, done.
+    Total 9 (delta 2), reused 0 (delta 0)
+    remote: Resolving deltas: 100% (2/2), done.
+    To https://github.com/Christian-JAC/clases-fullstack.git
+     * [new branch]      master -> master
+    Branch 'master' set up to track remote branch 'master' from 'origin'.
+    
+    estudiante@pc22 MINGW32 ~/Desktop/clase 1 fullstack (master)
+    $
+    
+ </p>
+
 </body>
 </html>
